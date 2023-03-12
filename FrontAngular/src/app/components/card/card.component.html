@@ -1,0 +1,22 @@
+<div class="card text-dark" style="width: 18rem;">
+  <img src={{movie.imagen}} class="card-img-top" alt="...">
+  <div class="card-body">
+    <div class="d-flex justify-content-end">
+      <span class="material-symbols-sharp material-symbols-sharp-fill estrella"
+        *ngFor="let x of [].constructor(movie.valoracion);let i=index" (click)="updateValoration(movie,i+1)">
+        grade
+      </span>
+      <span *ngFor="let x of [].constructor(5-movie.valoracion);let i=index" class="material-symbols-sharp estrella"
+        (click)="updateValoration(movie,i+1+movie.valoracion)">
+        star
+      </span>
+    </div>
+    <h5 class="card-title p-1">{{movie.nombre}}</h5>
+    <div class="d-flex justify-content-between">
+      <a routerLink="/edit/{{movie.id_peli}}" class="btn btn-warning">Editar Pelicula</a>
+      <button class="btn fs-6 " title="Eliminar" (click)="delete()">Eliminar
+        🗑</button>
+    </div>
+
+  </div>
+</div>

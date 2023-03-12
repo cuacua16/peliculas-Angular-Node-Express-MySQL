@@ -1,0 +1,21 @@
+img {
+  height: 300px;
+  width: 100%;
+  object-fit: cover;
+}
+button:hover {
+  box-shadow: 1px -1px 8px #d6afaf;
+  transition: all 0.3s ease;
+  color: red !important;
+}
+
+.estrella {
+  color: rgb(230, 233, 55);
+  cursor: pointer;
+  font-size: 22px;
+  padding-bottom: 0;
+  transition: all 0.2s ease;
+}
+.estrella:hover {
+  color: black;
+}

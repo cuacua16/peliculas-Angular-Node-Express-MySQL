@@ -1,0 +1,21 @@
+<div class="d-flex justify-content-between">
+  <div class="nav nav-tabs m-2 border-0" id="nav-tab" role="tablist">
+    <button class="nav-link active bg-dark text-light" id=" nav-home-tab" data-bs-toggle="tab"
+      data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true"
+      (click)="order='nombre'; getMovies()">Por
+      Nombre</button>
+    <button class="nav-link bg-dark text-light" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile"
+      type="button" role="tab" aria-controls="nav-profile" aria-selected="false"
+      (click)="order='valoracion';getMovies()">Por
+      Valoración</button>
+  </div>
+  <div class="d-flex p-2 pt-3" role="search">
+    <input class="form-control me-2 " type="text" placeholder="Search" [(ngModel)]="search">
+    <button class="btn btn-outline-info my-2 my-sm-0" type="submit" (click)="onSearch()">Search</button>
+  </div>
+
+</div>
+<div class="d-flex flex-wrap gap-5 justify-content-center p-5">
+  <app-card *ngFor="let movie of movies" [movie]="movie">
+  </app-card>
+</div>

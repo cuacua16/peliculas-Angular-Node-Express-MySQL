@@ -1,0 +1,17 @@
+<div class="container p-5 d-flex flex-column align-items-center">
+  <h2 class="h2 text-center m-5">Agregar Película</h2>
+  <form (ngSubmit)="onSubmit(form.value)" #form="ngForm" class="w-50 d-flex flex-column">
+    <div class="mb-3">
+      <label for="nombre" class="form-label">Nombre</label>
+      <input ngModel type="text" name="nombre" class="form-control" id="nombre" maxlength="65" required
+        #nombre="ngModel">
+
+    </div>
+    <div class="mb-3">
+      <label for="imagen" class="form-label">URL Imagen</label>
+      <input ngModel type="text" name="imagen" class="form-control" id="imagen" maxlength="365" required
+        #imagen="ngModel">
+    </div>
+    <button type="submit" class="btn btn-info align-self-end w-25 m-4">Agregar</button>
+  </form>
+</div>
